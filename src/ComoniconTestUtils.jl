@@ -5,24 +5,24 @@ export @test_args, @test_kwargs, random_command
 using Faker
 using ComoniconTypes
 
-const args = Ref{Vector{Any}}()
-const kwargs = Ref{Vector{Any}}()
+const args = Ref{Vector{Any}}([])
+const kwargs = Ref{Vector{Any}}([])
 
-function test_function(xs...; kwargs...)
-    test_args[] = [xs...]
-    test_kwargs[] = [kwargs...]
+function test_function(xs...; kw...)
+    args[] = [xs...]
+    kwargs[] = collect(Any, kw)
     return 1
 end
 
 macro test_args(ex)
     quote
-        $ComoniconTestUtils.args[] == $(ex)
+        @test $ComoniconTestUtils.args[] == $(ex)
     end |> esc
 end
 
 macro test_kwargs(ex)
     quote
-        $ComoniconTestUtils.kwargs[] == $ex
+        @test $ComoniconTestUtils.kwargs[] == $ex
     end |> esc
 end
 
@@ -89,7 +89,7 @@ function random_command()
                 )
             )
         )
-    ) 
+    )
 end
 
 
