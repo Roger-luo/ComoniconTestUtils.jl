@@ -6,3 +6,5 @@ using Test
     @test_args ["a", "b", "c"]
     @test_kwargs [:option_a=>1, :option_b=>2]    
 end
+
+rand_command()
