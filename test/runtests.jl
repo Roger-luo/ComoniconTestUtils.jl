@@ -1,6 +1,9 @@
+using Random
 using ComoniconTypes
 using ComoniconTestUtils
 using Test
+
+Random.seed!(42)
 
 @testset "ComoniconTestUtils.jl" begin
     ComoniconTestUtils.test_function("a", "b", "c"; option_a=1, option_b=2)
