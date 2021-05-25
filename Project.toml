@@ -1,7 +1,7 @@
 name = "ComoniconTestUtils"
 uuid = "53b67e40-53a7-4335-973f-e3e901fe4865"
 authors = ["Roger-Luo <rogerluo.rl18@gmail.com> and contributors"]
-version = "0.1.0"
+version = "0.2.0"
 
 [deps]
 ComoniconTypes = "d0eb39ce-029e-40d1-add6-e32b3165f6a3"
