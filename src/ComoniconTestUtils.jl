@@ -44,7 +44,7 @@ function random_command()
     )
 
     flags = Dict(
-        "flag-a" => Flag(;sym=:flag_a, short=true, description="flag a." * Faker.text()),
+        "flag-a" => Flag(;sym=:flag_a, description="flag a." * Faker.text()),
         "flag-b" => Flag(;sym=:flag_b, short=true, description="flag b." * Faker.text()),
     )
 
