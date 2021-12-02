@@ -5,6 +5,8 @@
 
 Test utilities for Comonicon applications.
 
+This package is now inside [Comonicon](https://github.com/comonicon/Comonicon.jl)
+
 ## Installation
 
 <p>
